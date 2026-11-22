@@ -1,0 +1,12 @@
+{
+  "sample-01": ["island", "sea", "ship"],
+  "sample-02": ["island", "sea", "ship"],
+  "sample-03": ["sea", "ship", "whale"],
+  "sample-04": ["garden", "rose"],
+  "sample-05": [],
+  "sample-06": ["sea"],
+  "sample-07": ["garden", "rose", "tree"],
+  "sample-08": ["orbit", "planet", "star"],
+  "sample-09": ["planet", "star"],
+  "sample-10": ["music"]
+}

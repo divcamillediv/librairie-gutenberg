@@ -1,0 +1,65 @@
+# Trois conteneurs : base PostgreSQL, backend FastAPI et frontend React (servi par nginx).
+#   cp .env.example .env        # puis choisir POSTGRES_PASSWORD
+#   docker compose up --build
+#   -> application : http://<IP-du-serveur>:8080     API : http://<IP-du-serveur>:8000/docs
+#
+# Import des métadonnées (une fois, depuis la machine hôte, base démarrée) :
+#   POSTGRES_PASSWORD=... python scripts/import_metadata.py
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: gutenberg
+      POSTGRES_USER: gutenberg
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Définir POSTGRES_PASSWORD dans .env}
+    ports:
+      # Accessible depuis la machine hôte seulement (pour scripts/import_metadata.py).
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gutenberg -d gutenberg"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    environment:
+      DATA_DIR: /data
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: gutenberg
+      POSTGRES_USER: gutenberg
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Définir POSTGRES_PASSWORD dans .env}
+    volumes:
+      # Textes, index et graphe pré-calculés (lecture seule pour l'API).
+      - ./data:/data:ro
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      # Le chargement de l'index complet au démarrage peut prendre du temps.
+      start_period: 60s
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

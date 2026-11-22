@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1342,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "language": "en",
+    "word_count": 127,
+    "file_path": "data/sample/texts/1342.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/1342"
+  },
+  {
+    "id": 84,
+    "title": "Frankenstein; Or, The Modern Prometheus",
+    "author": "Mary Wollstonecraft Shelley",
+    "language": "en",
+    "word_count": 124,
+    "file_path": "data/sample/texts/84.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/84"
+  },
+  {
+    "id": 11,
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "language": "en",
+    "word_count": 139,
+    "file_path": "data/sample/texts/11.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/11"
+  },
+  {
+    "id": 2701,
+    "title": "Moby Dick; Or, The Whale",
+    "author": "Herman Melville",
+    "language": "en",
+    "word_count": 135,
+    "file_path": "data/sample/texts/2701.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/2701"
+  },
+  {
+    "id": 1661,
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "language": "en",
+    "word_count": 127,
+    "file_path": "data/sample/texts/1661.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/1661"
+  },
+  {
+    "id": 98,
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "language": "en",
+    "word_count": 123,
+    "file_path": "data/sample/texts/98.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/98"
+  },
+  {
+    "id": 345,
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "language": "en",
+    "word_count": 118,
+    "file_path": "data/sample/texts/345.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/345"
+  },
+  {
+    "id": 120,
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson",
+    "language": "en",
+    "word_count": 125,
+    "file_path": "data/sample/texts/120.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/120"
+  },
+  {
+    "id": 1400,
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "language": "en",
+    "word_count": 129,
+    "file_path": "data/sample/texts/1400.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/1400"
+  },
+  {
+    "id": 74,
+    "title": "The Adventures of Tom Sawyer",
+    "author": "Mark Twain",
+    "language": "en",
+    "word_count": 124,
+    "file_path": "data/sample/texts/74.txt",
+    "source_url": "https://www.gutenberg.org/ebooks/74"
+  }
+]

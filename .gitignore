@@ -1,0 +1,36 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend
+node_modules/
+dist/
+coverage/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Generated corpus and artifacts; retain directory markers only.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/data/indexes/*
+!/data/indexes/.gitkeep
+/data/graphs/*
+!/data/graphs/.gitkeep
+/data/metadata/*
+!/data/metadata/.gitkeep
+patches/
+docs/

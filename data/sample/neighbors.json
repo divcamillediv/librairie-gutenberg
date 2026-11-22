@@ -1,0 +1,110 @@
+{
+  "1342": [
+    {
+      "id": 1400,
+      "similarity": 0.34
+    },
+    {
+      "id": 98,
+      "similarity": 0.29
+    },
+    {
+      "id": 11,
+      "similarity": 0.2
+    }
+  ],
+  "84": [
+    {
+      "id": 345,
+      "similarity": 0.38
+    },
+    {
+      "id": 2701,
+      "similarity": 0.22
+    }
+  ],
+  "11": [
+    {
+      "id": 74,
+      "similarity": 0.27
+    },
+    {
+      "id": 1342,
+      "similarity": 0.2
+    }
+  ],
+  "2701": [
+    {
+      "id": 120,
+      "similarity": 0.36
+    },
+    {
+      "id": 84,
+      "similarity": 0.22
+    }
+  ],
+  "1661": [
+    {
+      "id": 345,
+      "similarity": 0.25
+    },
+    {
+      "id": 98,
+      "similarity": 0.24
+    }
+  ],
+  "98": [
+    {
+      "id": 1400,
+      "similarity": 0.41
+    },
+    {
+      "id": 1342,
+      "similarity": 0.29
+    },
+    {
+      "id": 1661,
+      "similarity": 0.24
+    }
+  ],
+  "345": [
+    {
+      "id": 84,
+      "similarity": 0.38
+    },
+    {
+      "id": 1661,
+      "similarity": 0.25
+    }
+  ],
+  "120": [
+    {
+      "id": 2701,
+      "similarity": 0.36
+    },
+    {
+      "id": 74,
+      "similarity": 0.31
+    }
+  ],
+  "1400": [
+    {
+      "id": 98,
+      "similarity": 0.41
+    },
+    {
+      "id": 1342,
+      "similarity": 0.34
+    }
+  ],
+  "74": [
+    {
+      "id": 120,
+      "similarity": 0.31
+    },
+    {
+      "id": 11,
+      "similarity": 0.27
+    }
+  ]
+}
