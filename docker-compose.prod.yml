@@ -1,0 +1,8 @@
+services:
+  backend:
+    image: ghcr.io/divcamillediv/librairie-gutenberg-backend:latest
+    build: !reset null
+
+  frontend:
+    image: ghcr.io/divcamillediv/librairie-gutenberg-frontend:latest
+    build: !reset null
